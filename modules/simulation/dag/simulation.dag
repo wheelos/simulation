@@ -1,0 +1,12 @@
+module_config {
+    module_library : "/apollo/bazel-bin/external/wheelos_simulation+/modules/simulation/libsimulation_component.so"
+
+    timer_components {
+        class_name : "SimulationComponent"
+        config {
+            name: "simulation"
+            flag_file_path: "/apollo/pkgs/simulation/modules/simulation/conf/simulation.conf"
+            interval: 20
+        }
+    }
+}
